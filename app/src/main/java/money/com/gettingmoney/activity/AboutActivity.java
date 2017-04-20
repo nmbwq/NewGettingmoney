@@ -13,7 +13,7 @@ public class AboutActivity extends BaseActivity {
      * @param savedInstanceState
      *
      */
-    //今天是4月20号哈哈哈再过10天就放假了
+    //今天是4月20号哈哈哈再过10天就放假了545325468512
     private TextView head_title,head_right;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
