@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <com.handmark.pulltorefresh.library.PullToRefreshScrollView
+        android:id="@+id/pullToRefreshScrollVie"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include layout="@layout/sign_space_view"></include>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:paddingTop="20dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1.5"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/focus"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:background="@drawable/bai_4087f5_shape"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp">
+
+                    <SearchView
+                        android:id="@+id/searchview"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingTop="2dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/bai_4087f5_shape"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/im_jian"
+                        android:layout_width="32dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/_4087f5"
+                        android:padding="7dp"
+                        android:src="@mipmap/jian" />
+
+                    <TextView
+                        android:id="@+id/tv_number"
+                        style="@style/_black_font_16sp"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:text="1" />
+
+                    <ImageView
+                        android:id="@+id/im_jia"
+                        android:layout_width="32dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/_4087f5"
+                        android:padding="7dp"
+                        android:src="@mipmap/bai_jia" />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginTop="4dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp">
+
+                    <TextView
+                        android:id="@+id/stopfall"
+
+                        android:textSize="12sp"
+                        style="@style/_black_font_16sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="跌停--" />
+
+                    <TextView
+                        android:textSize="12sp"
+                        android:id="@+id/stoprise"
+                        style="@style/_black_font_16sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:gravity="center_vertical"
+                        android:text="涨停--" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:background="@drawable/bai_4087f5_shape"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+
+                    >
+
+                    <EditText
+                        android:background="@null"
+                        android:padding="2dp"
+                        android:numeric="integer"
+                        android:id="@+id/sell_num"
+                        style="@style/_black_font_16sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:hint=""
+                        android:textSize="12sp"/>
+
+                    <TextView
+                        android:id="@+id/saleTotal"
+                        android:textSize="12sp"
+                        style="@style/_999999_font_14sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:gravity="center_vertical"
+                        android:text="可卖:--" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/bai_4087f5_shape"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/quancang"
+
+                        android:textSize="12sp"
+                        style="@style/_e93030_font_16sp"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="全仓" />
+
+                    <TextView
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/_4087f5" />
+
+                    <TextView
+
+                        android:textSize="12sp"
+                        android:id="@+id/twocang"
+                        style="@style/_e93030_font_16sp"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="1/2仓" />
+
+                    <TextView
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/_4087f5" />
+
+                    <TextView
+
+                        android:textSize="12sp"
+                        android:id="@+id/threecang"
+                        style="@style/_e93030_font_16sp"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="1/3仓" />
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_buy"
+                    android:textSize="14sp"
+                    style="@style/_white_font_16sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/bai_themecolor1_shape"
+                    android:gravity="center"
+                    android:text="卖出" />
+
+            </LinearLayout>
+
+            <LinearLayout
+
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="16dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ListView
+                    android:divider="#00000000"
+                    android:dividerHeight="0dip"
+                    android:id="@+id/sell_listview"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    />
+
+                <ListView
+                    android:divider="#00000000"
+                    android:dividerHeight="0dip"
+                    android:id="@+id/buy_listview"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@null" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <include layout="@layout/sign_space_view" />
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/white"
+        android:padding="12dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:textSize="12sp"
+                style="@style/_666666_font_13sp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="全部资产：" />
+
+            <TextView
+                android:id="@+id/totleMoney"
+
+                android:textSize="12sp"
+                style="@style/_black_font_14sp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:orientation="horizontal">
+
+            <TextView
+                android:textSize="12sp"
+                style="@style/_666666_font_13sp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="80dp"
+                android:gravity="center_vertical"
+                android:text="可用资产："
+
+                />
+
+            <TextView
+                android:textSize="12sp"
+                android:id="@+id/supMoney"
+
+                style="@style/_black_font_14sp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <include layout="@layout/sign_line_view" />
+
+    <money.com.gettingmoney.bai.view.ListViewForScrollView
+        android:id="@+id/mLvShopMore"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@color/background"
+        android:scrollbars="none" />
+
+</LinearLayout>
+  </com.handmark.pulltorefresh.library.PullToRefreshScrollView>
+    <ListView
+        android:id="@+id/listview_edit"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="80dp"
+        android:background="@color/white"
+        android:visibility="gone" />
+</FrameLayout>

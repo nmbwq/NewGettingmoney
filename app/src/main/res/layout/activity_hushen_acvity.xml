@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/beijing"
+    android:orientation="vertical">
+
+    <include layout="@layout/head_item" />
+
+
+    <LinearLayout
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:background="@color/base_bg"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/type"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text="类型"
+            android:textColor="@color/text_gray"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/down"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="涨跌"
+                android:textColor="@color/text_gray"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/die"
+                android:layout_width="10dp"
+                android:layout_height="15dp"
+                 />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/rose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="涨幅"
+                android:textColor="@color/text_gray"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/zhang"
+                android:layout_width="10dp"
+                android:layout_height="15dp"
+                />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/deal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text="成交量"
+            android:textColor="@color/text_gray"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/indexlistview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@null"
+        android:divider="@null"
+     />
+
+</LinearLayout>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="20dp"
+    android:orientation="vertical">
+    <!-- 买入卖出-->
+    <LinearLayout
+        android:layout_marginTop="1dp"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:textSize="12sp"
+            android:id="@+id/sequence"
+            style="@style/_black_font_12sp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="" />
+
+        <TextView
+            android:textSize="12sp"
+            android:id="@+id/offer"
+            style="@style/_e93030_font_12sp"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="--" />
+
+        <TextView
+            android:textSize="12sp"
+            android:id="@+id/number"
+            style="@style/_black_font_12sp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="--" />
+    </LinearLayout>
+</LinearLayout>

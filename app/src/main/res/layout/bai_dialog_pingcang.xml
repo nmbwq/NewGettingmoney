@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bai_pingjia_dialog_shape"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="25dp">
+
+        <TextView
+            style="@style/_black_font_16sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="平仓确认" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/_999999_font_14sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="操作：" />
+
+            <TextView
+                style="@style/_black_font_14sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="平仓" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp">
+
+            <TextView
+                android:id="@+id/tv_text"
+                style="@style/_999999_font_14sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="操作：" />
+
+            <TextView
+                android:id="@+id/stockId"
+                style="@style/_black_font_14sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:paddingRight="10dp"
+                android:text="6000069" />
+
+            <TextView
+                android:id="@+id/stockName"
+                style="@style/_black_font_14sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/tv_text"
+                android:text="鑫哥投资" />
+
+            <TextView
+                style="@style/_999999_font_14sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@+id/stockId"
+                android:text="代码：" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="25dp"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:id="@+id/tv_text1"
+                style="@style/_999999_font_14sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="5dp"
+                android:text="盈亏：" />
+
+
+
+            <TextView
+                android:id="@+id/riseAndFallValue_riseAndFall"
+                style="@style/_black_font_14sp"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/tv_text1"
+                android:paddingTop="5dp"
+                android:text="524.02（0.43%）" />
+
+            <TextView
+                android:id="@+id/tv_text2"
+                style="@style/_999999_font_14sp"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:maxLength="5"
+                android:paddingTop="5dp"
+                android:text="数量："
+
+                android:layout_alignParentTop="true"
+                android:layout_toLeftOf="@+id/tv_number"
+                android:layout_toStartOf="@+id/tv_number" />
+
+            <EditText
+                android:textSize="14sp"
+                android:id="@+id/tv_number"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_black"
+                android:background="@null"
+                android:numeric="integer"
+                android:paddingTop="5dp"
+                android:text=""
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+             />
+
+        </RelativeLayout>
+
+        <include layout="@layout/sign_line_view"/>
+
+        <TextView
+            android:id="@+id/mTxtDialogConfirm"
+            style="@style/_e93030_font_16sp"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:gravity="center"
+            android:text="确认" />
+
+        <include layout="@layout/sign_line_view"></include>
+
+        <TextView
+            android:id="@+id/mTxtDialogCancel"
+            style="@style/_999999_font_16sp"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:gravity="center"
+            android:text="取消" />
+
+    </LinearLayout>
+</LinearLayout>

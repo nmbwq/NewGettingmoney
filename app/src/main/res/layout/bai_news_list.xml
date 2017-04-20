@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<money.com.gettingmoney.bai.main.view.ProgressLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/pl_message"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+     >
+
+
+        <com.handmark.pulltorefresh.library.PullToRefreshListView
+            android:id="@+id/mLvShopMore"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:divider="@null"
+            android:scrollbars="none"
+            />
+
+        <TextView
+            android:id="@+id/tv_no_data"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:layout_marginTop="13dp"
+            android:gravity="center"
+            android:text="无更多收藏数据"
+            android:textColor="@color/text_acac"
+            android:textSize="14sp"
+            android:visibility="gone"
+            />
+
+    </LinearLayout>
+
+
+</money.com.gettingmoney.bai.main.view.ProgressLayout>

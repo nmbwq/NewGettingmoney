@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="money.com.gettingmoney.bai.activity.Detials_KlineAct">
+
+    <include layout="@layout/header_detialskline" />
+    <LinearLayout
+        android:layout_below="@+id/header"
+        android:layout_marginBottom="48dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <com.handmark.pulltorefresh.library.PullToRefreshScrollView
+        android:id="@+id/pullToRefreshScrollVie"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+            <include layout="@layout/item_indexde" />
+
+            <FrameLayout
+                android:id="@+id/framelayout"
+                android:layout_below="@+id/ll"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@color/text_black">
+
+                <com.github.mikephil.charting.chartss.CombinedChart
+                    android:id="@+id/combinedchart"
+                    android:layout_width="match_parent"
+                    android:layout_height="192dp"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="4dp" />
+
+                <TextView
+                    android:id="@+id/detials_kline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|right"
+                    android:padding="2dp"
+                    android:text="click_kline"
+
+                    android:textColor="@color/white" />
+
+            </FrameLayout>
+
+
+            <money.com.gettingmoney.bai.view.ListViewForScrollView
+                android:id="@+id/mLvShopMore"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="none" />
+                </LinearLayout>
+
+
+
+        </LinearLayout>
+    </com.handmark.pulltorefresh.library.PullToRefreshScrollView>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="48dp">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="买入"
+            android:id="@+id/buy"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:background="@color/text_red"
+            android:layout_height="match_parent" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="卖出"
+            android:id="@+id/sell"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:background="@color/text_bule"
+            android:layout_height="match_parent" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="撤单"
+            android:id="@+id/kill_order"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:background="@color/text666"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+</RelativeLayout>

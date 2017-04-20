@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<money.com.gettingmoney.bai.main.view.ProgressLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mProgress"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical"
+    android:layout_marginBottom="10dp">
+
+
+    <com.handmark.pulltorefresh.library.PullToRefreshScrollView
+        android:id="@+id/pullToRefreshScrollVie"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp">
+
+                <ImageView
+                    android:id="@+id/image"
+                    android:layout_width="17dp"
+                    android:layout_height="15dp"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/bai_homepage_component1" />
+
+                <TextView
+                    style="@style/_black_font_16sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/image"
+                    android:gravity="center_vertical"
+                    android:text="组件" />
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="41dp"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_zujian"
+                        style="@style/_999999_font_14sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="4dp"
+                        android:gravity="center_vertical"
+                        android:text="组件管理" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <include layout="@layout/sign_line_view"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="107dp"
+                android:background="@color/white"
+                android:paddingBottom="13dp"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:paddingTop="13dp">
+                <!--添加组件-->
+                <GridView
+                    android:id="@+id/mZuJianList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:horizontalSpacing="10dp"
+                    android:numColumns="4"
+                    android:verticalSpacing="10dp"/>
+
+            </LinearLayout>
+
+            <include layout="@layout/sign_space_view"/>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="@color/white"
+                android:visibility="gone"
+                >
+
+
+                <com.github.mikephil.charting.chartss.LineChart
+                    android:id="@+id/mLineChar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    />
+
+
+            </RelativeLayout>
+
+            <include layout="@layout/sign_space_view"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="84dp"
+                android:src="@mipmap/bai_homepage_banner"/>
+
+            <include layout="@layout/sign_space_view"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="14dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="12dp"
+                    android:src="@mipmap/bai_homepage_news"/>
+
+                <TextView
+                    style="@style/_black_font_16sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:gravity="center_vertical"
+                    android:text="新闻资讯" />
+            </LinearLayout>
+
+            <include layout="@layout/sign_line_view"/>
+
+
+            <money.com.gettingmoney.bai.view.ListViewForScrollView
+                android:id="@+id/mLvShopMore1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none"/>
+        </LinearLayout>
+
+    </com.handmark.pulltorefresh.library.PullToRefreshScrollView>
+
+
+</money.com.gettingmoney.bai.main.view.ProgressLayout>
+
+

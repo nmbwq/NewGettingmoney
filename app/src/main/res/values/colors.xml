@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="text_red">#fd421a</color>
+    <color name="text_bule">#159be0</color>
+    <color name="text_black">#383838</color>
+    <color name="text_gray">#d8d7d7</color>
+    <color name="comm_3">#f3715c</color>
+    <color name="beijing">#f6f6f6</color>
+    <color name="home_dahong">#ff0000</color>
+    <color name="white">#ffffff</color>
+    <color name="hint_color">#d1d1d1</color>
+    <color name="text_hui">#999999</color>
+    <color name="text_green">#d1d1</color>
+    <color name="home_color">#ff0000</color>
+    <color name="chosebackground">#fff3f1</color>
+    <color name="black">#000000</color>
+    <color name="green">#38b44b</color>
+    <color name="blue">#1881b7</color>
+    <color name="b9">#b9b9b9</color>
+    <color name="text666">#666666</color>
+    <color name="text74">#747474</color>
+
+    <color name="color_letter_text_normal">#9da0a4</color>
+    <color name="base_bg">#f4f6f6</color>
+    <color name="base_actionbar_bg">#f5f5f5</color>
+
+    <color name="background">#f6f6f6</color>
+    <color name="_999999">#999999</color>
+    <!--<color name="_999999">#999999</color>-->
+    <color name="_383838">#383838</color>
+    <color name="_666666">#666666</color>
+    <color name="_f6f6f6">#f6f6f6</color>
+    <color name="text_acac">#acacac</color>
+    <color name="text_999">#999999</color>
+    <color name="blue1">#4086f5</color>
+    <color name="_555555">#555555</color>
+    <color name="text_red84">#84e93030</color>
+    <color name="color_f6f6">#f6f6f6</color>
+    <color name="toolBarColor">#E93030</color>
+    <color name="themeColor">#E93030</color>
+    <color name="statusBarColor">#e93030</color>
+    <color name="_e93030">#e93030</color>
+    <color name="_069043">#069043</color>
+    <color name="_4087f5">#4087f5</color>
+
+
+    <color name="minute_grayLine">#2D3945</color>
+    <color name="minute_blue">#00D0FC</color>
+    <color name="minute_yellow">#E7B448</color>
+    <color name="minute_black">#101419</color>
+    <color name="minute_jizhun">#7F9976</color>
+    <color name="minute_zhoutv">#858D93</color>
+    <color name="marker_bg">#1C232E</color>
+
+</resources>

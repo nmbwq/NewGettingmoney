@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="money.com.gettingmoney.activity.GangmeiDetialsAct">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/home_color">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="港股"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:src="@mipmap/sousuo"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.handmark.pulltorefresh.library.PullToRefreshScrollView
+            android:id="@+id/pullToRefreshScrollVie"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+
+
+            <!-- 此部分是标题部分 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <!-- 左侧标题的父容器 -->
+
+                    <LinearLayout
+                        android:id="@+id/left_title_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:orientation="vertical">
+
+                        <include layout="@layout/layout_left_title" />
+                    </LinearLayout>
+
+                    <!-- 右侧标题的父容器可实现水平滚动 -->
+
+                    <money.com.gettingmoney.LeftandRight.SyncHorizontalScrollView
+                        android:id="@+id/title_horsv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:scrollbars="@null">
+
+                        <LinearLayout
+                            android:id="@+id/right_title_container"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <include layout="@layout/layout_right_tab" />
+                        </LinearLayout>
+                    </money.com.gettingmoney.LeftandRight.SyncHorizontalScrollView>
+                </LinearLayout>
+
+                <!-- 此部分是内容部分 用ScrollView实现上下滚动效果 -->
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <!-- 左侧内容的父容器 -->
+
+                        <LinearLayout
+                            android:id="@+id/left_container"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical">
+                            <!--这个是左边的stockname的名字-->
+                            <ListView
+                                android:id="@+id/left_container_listview"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@color/text_gray" />
+                        </LinearLayout>
+
+                        <!-- 右侧内容的父容器 实现水平滚动 -->
+
+                        <money.com.gettingmoney.LeftandRight.SyncHorizontalScrollView
+                            android:id="@+id/content_horsv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:scrollbars="@null">
+
+                            <LinearLayout
+
+                                android:id="@+id/right_container"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <!--这个是右边的显示数据的listview-->
+                                <ListView
+                                    android:id="@+id/right_container_listview"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:divider="@color/text_gray"
+                                    android:dividerHeight="0.5dp" />
+
+                            </LinearLayout>
+                        </money.com.gettingmoney.LeftandRight.SyncHorizontalScrollView>
+                    </LinearLayout>
+                </ScrollView>
+
+
+            </LinearLayout>
+
+
+        </com.handmark.pulltorefresh.library.PullToRefreshScrollView>
+    </LinearLayout>
+</LinearLayout>
