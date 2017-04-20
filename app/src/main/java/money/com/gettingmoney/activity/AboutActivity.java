@@ -9,9 +9,11 @@ import money.com.gettingmoney.R;
 public class AboutActivity extends BaseActivity {
 
     /**
-     * 关于我们
+     * 关于我们今天是4月
      * @param savedInstanceState
+     *
      */
+    //今天是4月20号哈哈哈再过10天就放假了
     private TextView head_title,head_right;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
