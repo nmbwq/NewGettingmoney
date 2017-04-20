@@ -68,7 +68,7 @@ public class BusinessNewsActivity extends BaseActivity /*implements OnActionList
     private int xiala;
     private int type;
 
- //shdfsjfksfhskhfskfhskfhsk
+ //shdfsjfksfhskhfskfhskfhsk      bbbbbbbbbbb
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
